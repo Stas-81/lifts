@@ -1,9 +1,20 @@
-package classes;
+package exercises.lifts.classes;
 
 /**
  * Created by stanislav.matukevich on 14.05.2019.
  */
-public class Lift {
+public class Lift implements Runnable {
+
+    public void run () {
+        try {
+            Thread.sleep(500);
+            System.out.println("Hello from "+name);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    private String name;
 
     private int currentFloor;
 
@@ -13,10 +24,13 @@ public class Lift {
     private Integer destination;
     private Integer nextDestination;
 
-    public Lift(int currentFloor, int timeChangeFloor, int timeStop) {
+    public Lift(String name, int currentFloor, int timeChangeFloor, int timeStop) {
+        this.name = name;
         this.currentFloor = currentFloor;
         this.timeChangeFloor = timeChangeFloor;
         this.timeStop = timeStop;
+        this.destination = currentFloor;
+        this.nextDestination = currentFloor;
     }
 
 
