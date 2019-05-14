@@ -20,13 +20,13 @@ public class Lift {
     }
 
 
-    /*public int getCurrentFloor() {
+    public int getCurrentFloor() {
         return currentFloor;
     }
 
     public void setCurrentFloor(int currentFloor) {
         this.currentFloor = currentFloor;
-    }*/
+    }
 
     public void moveUp() {
         try {
