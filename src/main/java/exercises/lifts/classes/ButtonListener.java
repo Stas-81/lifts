@@ -6,7 +6,7 @@ public class ButtonListener implements Runnable {
 
     public int floorNumber;
     private Scanner scanner = new Scanner(System.in);
-    private int[][] buttons;
+    public int[][] buttons;
 
     public ButtonListener (int floorNumber){
         this.floorNumber = floorNumber;
@@ -15,7 +15,7 @@ public class ButtonListener implements Runnable {
 
     public void run() {
         try {
-            String inp = "";
+            String inp;
             System.out.println("Push button by command: U1/D2");
             while (true) {
                 Thread.sleep(100);
@@ -38,6 +38,8 @@ public class ButtonListener implements Runnable {
 
     public void pushButton(String inp){
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 1;
+        //System.out.println(Integer.parseInt(inp.substring(1,2))-1);
+        //System.out.println("U".equals(inp.substring(0,1))?0:1);
     }
 
     public void releaseButton(String inp){
