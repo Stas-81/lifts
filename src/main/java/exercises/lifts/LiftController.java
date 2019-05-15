@@ -21,7 +21,7 @@ public class LiftController implements Runnable{
     public void run () {
         try {
             Thread.sleep(1000);
-            System.out.println("Hello");
+            //System.out.println("Hello");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -34,6 +34,7 @@ public class LiftController implements Runnable{
             new Thread(liftController.lift[i]).start();
         }
         ButtonListener listener = new ButtonListener(Const.floorNumber);
+        //System.out.println("but");
         new Thread(listener).start();
     }
 }
