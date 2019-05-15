@@ -5,23 +5,6 @@ package exercises.lifts.classes;
  */
 public class Lift implements Runnable {
 
-    public void run () {
-        try {
-            while (true) {
-                if (currentFloor < destination) {
-                    moveUp();
-                }
-                if (destination > 0 && currentFloor > destination) {
-                    moveDown();
-                }
-                checkDestination();
-                Thread.sleep(100);
-            }
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
-
     private String name;
 
     private int currentFloor;
@@ -56,6 +39,33 @@ public class Lift implements Runnable {
     public void setCurrentFloor(int currentFloor) {
         this.currentFloor = currentFloor;
     }
+
+    public void run () {
+        try {
+            while (true) {
+                if (currentFloor < destination) {
+                    if (destination == Const.floorNumber && buttonListener.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+                        stop();
+                        buttonListener.releaseButton("U"+currentFloor);
+                    }
+                    moveUp();
+                }
+                if (destination > 0 && currentFloor > destination) {
+                    if (destination == 1 && buttonListener.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+                        stop();
+                        buttonListener.releaseButton("D"+currentFloor);
+                    }
+                    moveDown();
+                }
+
+                checkDestination();
+                Thread.sleep(100);
+            }
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
 
     public void moveUp() {
         try {
