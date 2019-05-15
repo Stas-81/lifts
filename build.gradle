@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 }
 
 mainClassName = 'exercises.lifts.LiftController'
@@ -35,6 +36,31 @@ task smokeTests(type: Test) { // we define a task with name ‘smokeTests’
        suites 'src/test/suite.xml'
        includeGroups 'smoke' // We define the group name by using ‘includeGroups’ parameter.
    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+
+task printTotalCoverage(dependsOn: 'jacocoTestReport') {
+    doLast {
+        def testReportFile = project.file("${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+        if (testReportFile.exists()) {
+            def rootNode = new XmlParser(false, false).parseText(testReportFile.text.replaceAll("<!DOCTYPE[^>]*>", ""))
+            def totalCovered = 0
+            def totalMissed = 0
+            rootNode.counter.each { counter ->
+                try {
+                    totalCovered += Integer.valueOf(counter.@covered as String)
+                    totalMissed += Integer.valueOf(counter.@missed as String)
+                } catch (ignore) {}
+            }
+            // Test coverage parsing regex: Total:\s[\d\.\,]+%
+            println "Coverage Total: ${String.format('%.2f', 100.0 * totalCovered / (totalMissed + totalCovered))}%"
+        }
+    }
 }
 
 sourceSets.main.resources { srcDirs = ["src/main/java"]; include "**/*.*" }

@@ -9,10 +9,10 @@ import exercises.lifts.classes.Lift;
  */
 public class LiftController implements Runnable{
 
-    private Lift[] lift;
+    public Lift[] lift;
 
 
-    private LiftController() {
+    public LiftController() {
         lift = new Lift[2];
         lift[0] = new Lift("Cargo elevator", Const.beginFloor, Const.timeChangeFloor, Const.timeStop);
         lift[1] = new Lift("Passenger elevator", Const.beginFloor, Const.timeChangeFloor, Const.timeStop);
