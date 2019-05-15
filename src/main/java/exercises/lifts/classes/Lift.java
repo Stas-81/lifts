@@ -5,7 +5,7 @@ package exercises.lifts.classes;
  */
 public class Lift implements Runnable {
 
-    private String name;
+    public String name;
 
     private int currentFloor;
 
@@ -15,45 +15,42 @@ public class Lift implements Runnable {
     public int destination;
     public int nextDestination;
 
-    private ButtonListener buttonListener;
+    private ButtonController buttonController;
 
     public void setDestination(int destination) {
-        //stop();
         this.destination = destination;
     }
 
-    public Lift(String name, int currentFloor, int timeChangeFloor, int timeStop, ButtonListener buttonListener) {
+    public Lift(String name, int currentFloor, int timeChangeFloor, int timeStop, ButtonController buttonController) {
         this.name = name;
         this.currentFloor = currentFloor;
         this.timeChangeFloor = timeChangeFloor;
         this.timeStop = timeStop;
         this.destination = 0;
         this.nextDestination = 0;
-        this.buttonListener = buttonListener;
+        this.buttonController = buttonController;
     }
 
     public int getCurrentFloor() {
         return currentFloor;
     }
 
-    public void setCurrentFloor(int currentFloor) {
-        this.currentFloor = currentFloor;
-    }
-
     public void run () {
         try {
             while (true) {
                 if (currentFloor < destination) {
-                    if (destination == Const.floorNumber && buttonListener.buttons[currentFloor-1][0]==1){ //забираем попутчиков
-                        stop();
-                        buttonListener.releaseButton("U"+currentFloor);
+                    if (destination == Const.floorNumber && buttonController.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+                        //System.out.println(name+" stoped on "+currentFloor+" to get up passengers");
+                        //stop();
+                        //buttonController.releaseButton("U"+currentFloor);
                     }
                     moveUp();
                 }
                 if (destination > 0 && currentFloor > destination) {
-                    if (destination == 1 && buttonListener.buttons[currentFloor-1][0]==1){ //забираем попутчиков
-                        stop();
-                        buttonListener.releaseButton("D"+currentFloor);
+                    if (destination == 1 && buttonController.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+                        //System.out.println(name+" stoped on "+currentFloor+" to get up passengers");
+                        //stop();
+                        //buttonController.releaseButton("D"+currentFloor);
                     }
                     moveDown();
                 }
@@ -69,8 +66,8 @@ public class Lift implements Runnable {
 
     public void moveUp() {
         try {
-            Thread.sleep(timeChangeFloor);
             currentFloor++;
+            Thread.sleep(timeChangeFloor);
             checkDestination();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -79,8 +76,8 @@ public class Lift implements Runnable {
 
     public void moveDown() {
         try {
-            Thread.sleep(timeChangeFloor);
             currentFloor--;
+            Thread.sleep(timeChangeFloor);
             checkDestination();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -90,8 +87,7 @@ public class Lift implements Runnable {
     public void stop() {
         try {
             Thread.sleep(timeStop);
-            destination = 0;
-            System.out.println(name +" остановился на этаже №"+currentFloor);
+            System.out.println(name +" stopped on the floor №"+currentFloor);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -99,13 +95,14 @@ public class Lift implements Runnable {
 
     public void checkDestination (){
         if (currentFloor == destination) {
+            destination = 0;
             stop();
             if (nextDestination >0) {
                 if (nextDestination > currentFloor) {
-                    buttonListener.releaseButton("U"+currentFloor);
-                    System.out.println("release");
+                    buttonController.releaseButton("U"+currentFloor);
+                    //System.out.println("release");
                 } else {
-                    buttonListener.releaseButton("D"+currentFloor);
+                    buttonController.releaseButton("D"+currentFloor);
                 }
                 destination = nextDestination;
                 nextDestination = 0;

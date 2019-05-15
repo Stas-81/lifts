@@ -2,13 +2,13 @@ package exercises.lifts.classes;
 
 import java.util.Scanner;
 
-public class ButtonListener implements Runnable {
+public class ButtonController implements Runnable {
 
     public int floorNumber;
     private Scanner scanner = new Scanner(System.in);
     public int[][] buttons;
 
-    public ButtonListener (int floorNumber){
+    public ButtonController(int floorNumber){
         this.floorNumber = floorNumber;
         buttons = new int[floorNumber][2]; //first UP, second DOWN
     }
@@ -38,11 +38,16 @@ public class ButtonListener implements Runnable {
 
     public void pushButton(String inp){
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 1;
+        //System.out.println("relUp");
         //System.out.println(Integer.parseInt(inp.substring(1,2))-1);
         //System.out.println("U".equals(inp.substring(0,1))?0:1);
     }
 
     public void releaseButton(String inp){
+        System.out.println("rel");
+        System.out.println(Integer.parseInt(inp.substring(1,2))-1);
+        //System.out.println("U".equals(inp.substring(0,1))?0:1);
+        System.out.println(inp);
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 0;
     }
 }
