@@ -12,8 +12,8 @@ public class Lift implements Runnable {
     private int timeChangeFloor;
     private int timeStop;
 
-    public int destination;
-    public int nextDestination;
+    public int destination = 0;
+    public int nextDestination = 0;
 
     private ButtonController buttonController;
 
@@ -22,8 +22,6 @@ public class Lift implements Runnable {
         this.currentFloor = currentFloor;
         this.timeChangeFloor = timeChangeFloor;
         this.timeStop = timeStop;
-        this.destination = 0;
-        this.nextDestination = 0;
         this.buttonController = buttonController;
     }
 
@@ -49,7 +47,7 @@ public class Lift implements Runnable {
 
     public void movementLogic (){
         if (currentFloor < destination) {
-            if (destination == Const.floorNumber && buttonController.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+            if (destination == Const.floorNumber && buttonController.buttons[currentFloor-1][0] == 1){ //забираем попутчиков
                 System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
                 stop();
                 buttonController.releaseButton("U"+currentFloor);
@@ -57,7 +55,7 @@ public class Lift implements Runnable {
             moveUp();
         }
         if (destination > 0 && currentFloor > destination) {
-            if (destination == 1 && buttonController.buttons[currentFloor-1][1]==1){ //забираем попутчиков
+            if (destination == 1 && buttonController.buttons[currentFloor-1][1] == 1){ //забираем попутчиков
                 System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
                 stop();
                 buttonController.releaseButton("D"+currentFloor);
@@ -65,7 +63,6 @@ public class Lift implements Runnable {
             moveDown();
         }
     }
-
 
     public void moveUp() {
         try {
@@ -100,7 +97,7 @@ public class Lift implements Runnable {
         if (currentFloor == destination) {
             stop();
             destination = 0;
-            if (nextDestination >0) {
+            if (nextDestination > 0) {
                 if (nextDestination > currentFloor) {
                     buttonController.releaseButton("U"+currentFloor);
                 } else if (nextDestination < currentFloor){

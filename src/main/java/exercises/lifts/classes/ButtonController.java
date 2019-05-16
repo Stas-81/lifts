@@ -17,37 +17,36 @@ public class ButtonController implements Runnable {
     }
 
     public void run() {
-        parseUserInput(scanner);
+        parseUserInput();
     }
 
-    public void parseUserInput (Scanner scanner) {
+    public void parseUserInput () {
         try {
-        String inp;
-        System.out.println("Push button by command: U1/D2");
-        while (true) {
-            Thread.sleep(100);
-            inp = scanner.nextLine();
-            if ("EXIT".equals(inp)){
-                System.out.println("Stop program by user");
-                System.exit(0); //need 2stop all threads before
-            } else if (inp.matches("[UD][1-"+ Const.floorNumber +"]") && !"D1".equals(inp) && !("U"+Const.floorNumber).equals(inp))
-            {
-                System.out.println("Pressed button: " + inp);
-                pushButton(inp);
-            } else {
-                System.out.println("Wrong input command.");
+            String inp;
+            System.out.println("Push button by command: U1/D2");
+            while (true) {
+                Thread.sleep(100);
+                inp = scanner.nextLine();
+                if ("EXIT".equals(inp)){
+                    System.out.println("Stop program by user");
+                    System.exit(0);
+                } else if (inp.matches("[UD][1-" + Const.floorNumber + "]") && !"D1".equals(inp) && !("U"+Const.floorNumber).equals(inp)) {
+                    System.out.println("Pressed button: " + inp);
+                    pushButton(inp);
+                } else {
+                    System.out.println("Wrong input command.");
+                }
             }
-        }
         } catch (Exception e){
             e.printStackTrace();
         }
     }
 
     public void pushButton(String inp){
-        buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 1;
+        buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1)) ? 0 : 1] = 1;
     }
 
     public void releaseButton(String inp){
-        buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 0;
+        buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1)) ? 0 : 1] = 0;
     }
 }

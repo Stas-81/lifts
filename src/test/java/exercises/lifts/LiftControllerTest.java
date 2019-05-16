@@ -85,7 +85,7 @@ public class LiftControllerTest {
         assertTrue(allWrittenLines.contains("Cargo elevator went to the floor № "));
     }
 
-    @Test(groups="smoke") //2do -> send to liftTestClass
+    @Test(groups="smoke")
     public void startPosition() {
         Assert.assertEquals(liftController.lift[0].getCurrentFloor(), Const.beginFloor);
     }
@@ -101,5 +101,4 @@ public class LiftControllerTest {
         liftController.lift[0].moveDown();
         Assert.assertEquals(liftController.lift[0].getCurrentFloor(), Const.beginFloor);
     }
-
 }

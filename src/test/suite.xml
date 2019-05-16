@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
  
 <!--Grouping Example-->
-<suite name="Training Suite">
+<suite name="Elevators Test suit">
     <test name="TestNG Test">
         <groups>
             <run>

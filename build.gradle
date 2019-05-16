@@ -16,8 +16,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-
     // https://mvnrepository.com/artifact/org.testng/testng
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
 
@@ -32,18 +30,9 @@ test { //this is the gradle task to be executed
     }
 }
 
-task smokeTests(type: Test) { // we define a task with name ‘smokeTests’
-   useTestNG() {
-       useDefaultListeners = true
-       suites 'src/test/suite.xml'
-       includeGroups 'smoke' // We define the group name by using ‘includeGroups’ parameter.
-   }
-}
-
 jacocoTestReport {
     reports {
         xml.enabled true
-	csv.enabled true
     }
 }
 
@@ -60,7 +49,6 @@ task printTotalCoverage(dependsOn: 'jacocoTestReport') {
                     totalMissed += Integer.valueOf(counter.@missed as String)
                 } catch (ignore) {}
             }
-            // Test coverage parsing regex: Total:\s[\d\.\,]+%
             println "Coverage Total: ${String.format('%.2f', 100.0 * totalCovered / (totalMissed + totalCovered))}%"
         }
     }
