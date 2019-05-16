@@ -26,7 +26,7 @@ public class ButtonController implements Runnable {
         System.out.println("Push button by command: U1/D2");
         while (true) {
             Thread.sleep(100);
-            inp = scanner.next();
+            inp = scanner.nextLine();
             if ("EXIT".equals(inp)){
                 System.out.println("Stop program by user");
                 System.exit(0); //need 2stop all threads before

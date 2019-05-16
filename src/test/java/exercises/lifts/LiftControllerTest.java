@@ -48,7 +48,7 @@ public class LiftControllerTest {
     }
 
     @Test(groups="smoke")
-    public void startLiftsLogicCheckSecondLift () throws Exception{
+    public void startLiftsLogicCheckSecondLiftUp () throws Exception{
         LiftController liftController = new LiftController();
         liftController.lift[0] = new Lift("Passenger elevator", 6, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
         liftController.lift[1] = new Lift("Cargo elevator", 1, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
@@ -63,8 +63,26 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        //Assert.assertEquals(allWrittenLines, "");
         assertTrue(allWrittenLines.contains("Cargo elevator went to the floor № 2"));
+    }
+
+    @Test(groups="smoke")
+    public void startLiftsLogicCheckSecondLiftDown () throws Exception{
+        LiftController liftController = new LiftController();
+        liftController.lift[0] = new Lift("Passenger elevator", 3, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
+        liftController.lift[1] = new Lift("Cargo elevator", 8, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        liftController.buttonController.buttons[7][1]=1;
+        liftController.buttonController.buttons[1][1]=1;
+
+        liftController.startLiftsLogic();
+
+        outputStream.flush();
+        String allWrittenLines = new String(outputStream.toByteArray());
+        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor № "));
     }
 
     @Test(groups="smoke") //2do -> send to liftTestClass

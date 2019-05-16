@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caaa5b6a-a342-48ff-b165-5a6088f6e270" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,16 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/suite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -107,48 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="108" column="27" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding>
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="18" column="124" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="124" />
             </state>
           </provider>
         </entry>
@@ -181,8 +134,8 @@
         <option value="$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Const.java" />
         <option value="$PROJECT_DIR$/src/test/suite.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java" />
@@ -204,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,9 +238,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ButtonControllerTest">
+  <component name="RunManager" selected="Application.LiftController">
     <configuration name="LiftController" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="exercises.lifts.LiftController" />
       <module name="lifts.lifts.main" />
@@ -475,45 +428,52 @@
       <option name="project" value="LOCAL" />
       <updated>1558001608118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add unit tests">
+      <created>1558016971864</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558016971864</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 20h 55m 27s.xml">
+    <history-entry file="LiftTest - 2019.05.16 at 22h 12m 03s.xml">
+      <configuration name="LiftTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="LiftTest - 2019.05.16 at 22h 15m 10s.xml">
+      <configuration name="LiftTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 15m 18s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 20h 56m 55s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 16m 15s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 20h 57m 05s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 17m 54s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 20h 58m 26s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 31m 36s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 20h 58m 39s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 35m 32s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 21h 00m 04s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 40m 00s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 21h 00m 18s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 40m 13s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 21h 01m 43s.xml">
-      <configuration name="ButtonControllerTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 21h 04m 16s.xml">
-      <configuration name="ButtonControllerTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ButtonControllerTest - 2019.05.16 at 21h 04m 37s.xml">
+    <history-entry file="ButtonControllerTest - 2019.05.16 at 22h 42m 03s.xml">
       <configuration name="ButtonControllerTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29932886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3033557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -531,7 +491,6 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32909605" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.50240386" side_tool="true" weight="0.28120807" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,6 +499,7 @@
       <window_info anchor="right" id="Gradle" order="5" sideWeight="0.49759614" weight="0.28120807" />
       <window_info anchor="right" id="Connector for AWS Lambda" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.50240386" side_tool="true" weight="0.28120807" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -550,7 +510,8 @@
     <MESSAGE value="add smokeTests" />
     <MESSAGE value="add jacoco" />
     <MESSAGE value="minor fix algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fix algorithm" />
+    <MESSAGE value="add unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit tests" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -604,32 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2677#2678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="124" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="108" column="27" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/suite.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -637,20 +572,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
+        <state relative-caret-position="230">
+          <caret line="1539" selection-start-line="1539" selection-end-line="1539" />
+          <folding>
+            <element signature="e#26907#26908#0" expanded="true" />
+            <element signature="e#26973#26974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="84" column="80" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        <state relative-caret-position="335">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/ButtonControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -659,12 +622,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="170">
+          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
           <folding>
             <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="124" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="124" />
         </state>
       </provider>
     </entry>

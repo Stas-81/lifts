@@ -70,7 +70,7 @@ public class LiftTest {
     }
 
     @Test(groups="Regression")
-    public void checkDestinationTest (){
+    public void checkDestinationUpTest (){
         ButtonController buttonController = new ButtonController(Const.floorNumber);
         Lift lift = new Lift("Passenger elevator", 1, Const.timeChangeFloor, Const.timeStop, buttonController);
         lift.setDestination(lift.getCurrentFloor());
@@ -78,5 +78,16 @@ public class LiftTest {
         lift.checkDestination();
 
         Assert.assertEquals(lift.destination,Const.floorNumber);
+    }
+
+    @Test(groups="Regression")
+    public void checkDestinationDownTest (){
+        ButtonController buttonController = new ButtonController(Const.floorNumber);
+        Lift lift = new Lift("Passenger elevator", Const.floorNumber, Const.timeChangeFloor, Const.timeStop, buttonController);
+        lift.setDestination(lift.getCurrentFloor());
+        lift.nextDestination = 1;
+        lift.checkDestination();
+
+        Assert.assertEquals(lift.destination,1);
     }
 }
