@@ -27,6 +27,8 @@ test { //this is the gradle task to be executed
     useTestNG() { //Tells Gradle to use TestNG
         useDefaultListeners = true // Tells TestNG to execute its default reporting structure
         suites 'src/test/suite.xml' //location of our suite.xml
+	includeGroups 'smoke' // We define the group name by using ‘includeGroups’ parameter.
+	includeGroups 'Regression' // We define the group name by using ‘includeGroups’ parameter.
     }
 }
 
@@ -41,6 +43,7 @@ task smokeTests(type: Test) { // we define a task with name ‘smokeTests’
 jacocoTestReport {
     reports {
         xml.enabled true
+	csv.enabled true
     }
 }
 
@@ -63,4 +66,4 @@ task printTotalCoverage(dependsOn: 'jacocoTestReport') {
     }
 }
 
-sourceSets.main.resources { srcDirs = ["src/main/java"]; include "**/*.*" }
+test.finalizedBy printTotalCoverage

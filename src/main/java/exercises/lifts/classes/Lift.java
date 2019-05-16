@@ -17,10 +17,6 @@ public class Lift implements Runnable {
 
     private ButtonController buttonController;
 
-    public void setDestination(int destination) {
-        this.destination = destination;
-    }
-
     public Lift(String name, int currentFloor, int timeChangeFloor, int timeStop, ButtonController buttonController) {
         this.name = name;
         this.currentFloor = currentFloor;
@@ -35,31 +31,38 @@ public class Lift implements Runnable {
         return currentFloor;
     }
 
+    public void setDestination(int destination) {
+        this.destination = destination;
+    }
+
     public void run () {
         try {
             while (true) {
-                if (currentFloor < destination) {
-                    if (destination == Const.floorNumber && buttonController.buttons[currentFloor-1][0]==1){ //забираем попутчиков
-                        System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
-                        stop();
-                        buttonController.releaseButton("U"+currentFloor);
-                    }
-                    moveUp();
-                }
-                if (destination > 0 && currentFloor > destination) {
-                    if (destination == 1 && buttonController.buttons[currentFloor-1][1]==1){ //забираем попутчиков
-                        System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
-                        stop();
-                        buttonController.releaseButton("D"+currentFloor);
-                    }
-                    moveDown();
-                }
-
+                movementLogic();
                 checkDestination();
                 Thread.sleep(100);
             }
         } catch (InterruptedException e){
             e.printStackTrace();
+        }
+    }
+
+    public void movementLogic (){
+        if (currentFloor < destination) {
+            if (destination == Const.floorNumber && buttonController.buttons[currentFloor-1][0]==1){ //забираем попутчиков
+                System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
+                stop();
+                buttonController.releaseButton("U"+currentFloor);
+            }
+            moveUp();
+        }
+        if (destination > 0 && currentFloor > destination) {
+            if (destination == 1 && buttonController.buttons[currentFloor-1][1]==1){ //забираем попутчиков
+                System.out.println(name+" stopped on "+currentFloor+" to get up passengers");
+                stop();
+                buttonController.releaseButton("D"+currentFloor);
+            }
+            moveDown();
         }
     }
 

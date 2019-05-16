@@ -17,23 +17,27 @@ public class ButtonController implements Runnable {
     }
 
     public void run() {
+        parseUserInput(scanner);
+    }
+
+    public void parseUserInput (Scanner scanner) {
         try {
-            String inp;
-            System.out.println("Push button by command: U1/D2");
-            while (true) {
-                Thread.sleep(100);
-                inp = scanner.nextLine();
-                if ("EXIT".equals(inp)){
-                    System.out.println("Stop program by user");
-                    System.exit(0); //need 2stop all threads before
-                } else if (inp.matches("[UD][1-"+ Const.floorNumber +"]") && !"D1".equals(inp) && !("U"+Const.floorNumber).equals(inp))
-                {
-                    System.out.println("Pressed button: " + inp);
-                    pushButton(inp);
-                } else {
-                    System.out.println("Wrong input command.");
-                }
+        String inp;
+        System.out.println("Push button by command: U1/D2");
+        while (true) {
+            Thread.sleep(100);
+            inp = scanner.next();
+            if ("EXIT".equals(inp)){
+                System.out.println("Stop program by user");
+                System.exit(0); //need 2stop all threads before
+            } else if (inp.matches("[UD][1-"+ Const.floorNumber +"]") && !"D1".equals(inp) && !("U"+Const.floorNumber).equals(inp))
+            {
+                System.out.println("Pressed button: " + inp);
+                pushButton(inp);
+            } else {
+                System.out.println("Wrong input command.");
             }
+        }
         } catch (Exception e){
             e.printStackTrace();
         }

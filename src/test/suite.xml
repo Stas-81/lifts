@@ -12,6 +12,7 @@
         </groups>
         <classes>
             <class name="exercises.lifts.LiftControllerTest"></class>
+            <class name="exercises.lifts.classes.LiftTest"></class>
         </classes>
     </test>
 </suite>
