@@ -44,10 +44,10 @@ public class ButtonController implements Runnable {
     }
 
     public void releaseButton(String inp){
-        System.out.println("rel");
-        System.out.println(Integer.parseInt(inp.substring(1,2))-1);
+        //System.out.println("rel");
+        //System.out.println(Integer.parseInt(inp.substring(1,2))-1);
         //System.out.println("U".equals(inp.substring(0,1))?0:1);
-        System.out.println(inp);
+        //System.out.println(inp);
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 0;
     }
 }

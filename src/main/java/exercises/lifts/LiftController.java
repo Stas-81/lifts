@@ -26,35 +26,40 @@ public class LiftController implements Runnable{
             while (true) {
                 int cl1But = closestButton(lift[0]);
                 int cl2But = closestButton(lift[1]);
+                //System.out.println(lift[1].getCurrentFloor());
                 //System.out.println(cl1But+" "+cl2But);
                 if (lift[0].destination == 0 && //отправляемся в closestButton(lift[0]
-                        lift[0].nextDestination == 0 &&
+                        //lift[0].nextDestination == 0 &&
                         cl1But != 0){
-                    System.out.println(lift[0].name +" went on the floor № "+cl1But);
+                    System.out.println(lift[0].name +" went to the floor № "+cl1But);
                     lift[0].setDestination(Math.abs(cl1But));
                     lift[0].nextDestination = cl1But > 0 ? Const.floorNumber : 1;
                 }
-                if (lift[0].destination != 0 && // //отправляемся в closestButton(lift[1] вверх
+                //
+
+                //
+                //System.out.println(lift[0].getCurrentFloor()-lift[0].destination<0);
+                //System.out.println(lift[0].getCurrentFloor() +" "+lift[0].destination);
+                if (lift[0].destination != 0 && //отправляемся в closestButton(lift[1] вверх
                         lift[1].destination == 0 &&
-                        lift[1].nextDestination ==0 &&
                         cl2But>0 &&
                         lift[0].getCurrentFloor()> cl2But &&
                         lift[0].getCurrentFloor()-lift[0].destination<0) {
-                    System.out.println(lift[1].name +" went on the floor № "+cl2But);
+                    System.out.println(lift[1].name +" went to the floor № "+cl2But);
                     lift[1].destination = Math.abs(cl2But);
                     lift[1].nextDestination = Const.floorNumber;
                 }
                 if (lift[0].destination != 0 && // //отправляемся в closestButton(lift[1] вниз
                         lift[1].destination == 0 &&
-                        lift[1].nextDestination ==0 &&
+                        //lift[1].nextDestination ==0 &&
                         cl2But<0 &&
                         lift[0].getCurrentFloor()< cl2But &&
                         lift[0].getCurrentFloor()-lift[0].destination>0) {
-                    System.out.println(lift[1].name +" went on the floor № "+cl2But);
+                    System.out.println(lift[1].name +" went to the floor № "+cl2But);
                     lift[1].destination = Math.abs(cl2But);
                     lift[1].nextDestination = 1;
                 }
-                Thread.sleep(1000);
+                Thread.sleep(100);
                 //System.out.println(cl1But);
             }
         } catch(InterruptedException e) {
@@ -68,8 +73,10 @@ public class LiftController implements Runnable{
         int distance = buttonController.floorNumber;
         for (int i = 0; i < buttonController.floorNumber; i++) {
             if (buttonController.buttons[i][0]==1 || buttonController.buttons[i][1]==1) {
+                //System.out.println(i);
 
                 if (Math.abs(lift.getCurrentFloor()-i-1)<distance) {
+                    distance = Math.abs(lift.getCurrentFloor()-i-1);
                     result = i+1;
                     if (buttonController.buttons[i][1]==1) {
                         result *=-1;
