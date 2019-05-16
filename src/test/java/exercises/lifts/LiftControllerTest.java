@@ -16,23 +16,23 @@ import static org.testng.Assert.assertTrue;
 
 public class LiftControllerTest {
 
-    LiftController liftController = new LiftController();
+    private LiftController liftController = new LiftController();
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void closestButtonCheckUp(){
         LiftController liftController = new LiftController();
         liftController.buttonController.pushButton("U2");
         Assert.assertEquals(liftController.closestButton(liftController.lift[0]),2);
     }
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void closestButtonCheckDown(){
         LiftController liftController = new LiftController();
         liftController.buttonController.pushButton("D7");
         Assert.assertEquals(liftController.closestButton(liftController.lift[0]),-7);
     }
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void startLiftsLogicCheckFirstLift () throws Exception{
         LiftController liftController = new LiftController();
 
@@ -44,10 +44,10 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Passenger elevator went to the floor № 2"));
+        assertTrue(allWrittenLines.contains("Passenger elevator went to the floor №2"));
     }
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void startLiftsLogicCheckSecondLiftUp () throws Exception{
         LiftController liftController = new LiftController();
         liftController.lift[0] = new Lift("Passenger elevator", 6, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
@@ -63,10 +63,10 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor № 2"));
+        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor №2"));
     }
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void startLiftsLogicCheckSecondLiftDown () throws Exception{
         LiftController liftController = new LiftController();
         liftController.lift[0] = new Lift("Passenger elevator", 3, Const.timeChangeFloor, Const.timeStop, liftController.buttonController);
@@ -82,21 +82,21 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor № "));
+        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor №"));
     }
 
-    @Test(groups="smoke")
+    @Test(groups="Regression")
     public void startPosition() {
         Assert.assertEquals(liftController.lift[0].getCurrentFloor(), Const.beginFloor);
     }
 
-    @Test(groups="smoke",dependsOnMethods={"startPosition"})
+    @Test(groups="Regression",dependsOnMethods={"startPosition"})
     public void moveUpLift() {
         liftController.lift[0].moveUp();
         Assert.assertEquals(liftController.lift[0].getCurrentFloor(), Const.beginFloor+1);
     }
 
-    @Test(groups="smoke",dependsOnMethods={"moveUpLift"})
+    @Test(groups="Regression",dependsOnMethods={"moveUpLift"})
     public void moveDownLift() {
         liftController.lift[0].moveDown();
         Assert.assertEquals(liftController.lift[0].getCurrentFloor(), Const.beginFloor);
