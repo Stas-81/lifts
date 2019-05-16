@@ -2,6 +2,9 @@ package exercises.lifts.classes;
 
 import java.util.Scanner;
 
+/**
+ * Created by stanislav.matukevich on 14.05.2019.
+ */
 public class ButtonController implements Runnable {
 
     public int floorNumber;
@@ -38,16 +41,9 @@ public class ButtonController implements Runnable {
 
     public void pushButton(String inp){
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 1;
-        //System.out.println("relUp");
-        //System.out.println(Integer.parseInt(inp.substring(1,2))-1);
-        //System.out.println("U".equals(inp.substring(0,1))?0:1);
     }
 
     public void releaseButton(String inp){
-        //System.out.println("rel");
-        //System.out.println(Integer.parseInt(inp.substring(1,2))-1);
-        //System.out.println("U".equals(inp.substring(0,1))?0:1);
-        //System.out.println(inp);
         buttons[Integer.parseInt(inp.substring(1,2))-1]["U".equals(inp.substring(0,1))?0:1] = 0;
     }
 }
