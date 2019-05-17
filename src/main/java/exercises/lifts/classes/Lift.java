@@ -87,7 +87,7 @@ public class Lift implements Runnable {
     public void stop() {
         try {
             Thread.sleep(timeStop);
-            System.out.println(name +" stopped on the floor №"+currentFloor);
+            System.out.println(name +" stopped on the floor number "+currentFloor);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

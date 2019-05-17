@@ -66,7 +66,7 @@ public class LiftTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("stopped on the floor №"));
+        assertTrue(allWrittenLines.contains("stopped on the floor "));
     }
 
     @Test(groups="Regression")

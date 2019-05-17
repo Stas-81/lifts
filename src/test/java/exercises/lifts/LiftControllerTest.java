@@ -44,7 +44,7 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Passenger elevator went to the floor №2"));
+        assertTrue(allWrittenLines.contains("Passenger elevator went to the floor number 2"));
     }
 
     @Test(groups="Regression")
@@ -63,7 +63,7 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor №2"));
+        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor number 2"));
     }
 
     @Test(groups="Regression")
@@ -82,7 +82,7 @@ public class LiftControllerTest {
 
         outputStream.flush();
         String allWrittenLines = new String(outputStream.toByteArray());
-        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor №"));
+        assertTrue(allWrittenLines.contains("Cargo elevator went to the floor number"));
     }
 
     @Test(groups="Regression")
