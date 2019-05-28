@@ -18,7 +18,8 @@ pipeline {
 	    }
 	stage('Test') {
             steps {
-                //bat 'gradle clean build'
+                bat 'echo "Test stage"'
+		//bat 'gradle clean build'
             }
         }
         }
