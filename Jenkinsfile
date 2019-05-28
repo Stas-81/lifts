@@ -9,8 +9,8 @@ pipeline {
             steps {
 		timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
-                        bat 'echo "hello"'
-			bat 'set'
+                        sh 'echo "hello"'
+			//bat 'set'
 			// esh 'ls -la'
                     }
             	}
@@ -18,8 +18,8 @@ pipeline {
         }
 	stage('Test') {
             steps {
-                bat 'echo "test"'
-		bat 'gradle clean build'
+                sh 'echo "test"'
+		sh 'gradle clean build'
             }
         }
     }
