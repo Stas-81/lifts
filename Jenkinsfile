@@ -5,7 +5,7 @@ pipeline {
         	DB_ENGINE    = 'sqlite'
     	}
     tools {
-        gradle "GRADLE_LATEST"
+        gradle "gradle-5.4"
     }
     stages {
         stage('build') {
