@@ -15,12 +15,12 @@ pipeline {
                     }
             	}
 	    }
+        }
 	stage('Test') {
             steps {
-                bat 'echo "Test stage"'
+                bat 'echo "test"'
 		bat 'gradle clean build'
             }
-        }
         }
     }
     post {
