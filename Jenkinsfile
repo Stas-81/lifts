@@ -1,17 +1,48 @@
-// Powered by Infostretch 
+pipeline {
+    agent any
+	environment {
+        	DISABLE_AUTH = 'true'
+        	DB_ENGINE    = 'sqlite'
+    	}
+    tools {
+        gradle "gradle-5.4"
+    }
+    stages {
+        stage('build') {
+            steps {
+		timeout(time: 3, unit: 'MINUTES') {
+                    retry(5) {
+                        sh 'echo "Build step"'
+			//bat 'set'
+			// esh 'ls -la'
+                    }
+            	}
+	    }
+        }
+	stage('Test') {
+            steps {
+                sh 'echo "Test step"'
+		sh 'gradle clean build'
+            }
+        }
+    }
+    post {
+        always {
+            junit '**/testng-results.xml'
 
-timestamps {
-
-node () {
-
-	stage ('lift2 - Checkout') {
- 	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git_login', url: 'https://github.com/Stas-81/lifts']]]) 
-	}
-	stage ('lift2 - Build') {
- 	
-// Unable to convert a build step referring to "hudson.plugins.gradle.Gradle". Please verify and convert manually if required.
-		// TestNG Results
-		step([$class: 'Publisher', escapeExceptionMsg: true, escapeTestDescp: true, failureOnFailedTestConfig: false, reportFilenamePattern: '**/testng-results.xml', showFailedBuilds: false, thresholdMode: 2, unstableSkips: 100, failedSkips: 100, unstableFails: 0, failedFails: 100]) 
-	}
-}
+        }
+        success {
+            echo 'This will run only if successful'
+        }
+        failure {
+            echo 'This will run only if failed'
+        }
+        unstable {
+            echo 'This will run only if the run was marked as unstable'
+        }
+        changed {
+            echo 'This will run only if the state of the Pipeline has changed'
+            echo 'For example, if the Pipeline was previously failing but is now successful'
+        }
+    }
 }
