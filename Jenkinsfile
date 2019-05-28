@@ -28,7 +28,7 @@ pipeline {
     }
     post {
         always {
-            junit '**/testng-results.xml'
+            step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
 
         }
         success {
