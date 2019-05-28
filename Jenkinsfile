@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh 'echo "Test step"'
 		sh 'gradle build'
-		bat 'echo "error"'
+		// bat 'echo "error"'
             }
         }
     }
