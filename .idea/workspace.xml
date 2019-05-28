@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caaa5b6a-a342-48ff-b165-5a6088f6e270" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/run.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/lifts/LiftController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/exercises/lifts/LiftController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/lifts/classes/Lift.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/exercises/lifts/classes/Lift.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/exercises/lifts/LiftControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/exercises/lifts/LiftControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/exercises/lifts/classes/LiftTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/exercises/lifts/classes/LiftTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -95,10 +85,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
+            <state relative-caret-position="236">
               <caret line="84" column="84" selection-start-line="84" selection-start-column="84" selection-end-line="84" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="474">
+              <caret line="86" column="42" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -119,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
+            <state relative-caret-position="1054">
               <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,7 +121,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state relative-caret-position="1445">
               <caret line="89" column="67" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
               <folding>
                 <element signature="e#725#726#0" expanded="true" />
@@ -146,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="833">
               <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
               <folding>
                 <element signature="e#465#466#0" expanded="true" />
@@ -208,7 +198,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,6 +278,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -503,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558026154781</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="clean up">
+      <created>1558057428868</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558057428868</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -540,15 +537,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31208053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3167785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38526914" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38526914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -654,16 +652,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="236">
+          <caret line="84" column="84" selection-start-line="84" selection-start-column="84" selection-end-line="84" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/Lift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="1445">
           <caret line="89" column="67" selection-start-line="89" selection-start-column="67" selection-end-line="89" selection-end-column="67" />
           <folding>
             <element signature="e#725#726#0" expanded="true" />
@@ -676,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/classes/ButtonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="833">
           <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
             <element signature="e#465#466#0" expanded="true" />
@@ -685,23 +696,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/classes/LiftTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercises/lifts/LiftController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/lifts/LiftControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="84" column="84" selection-start-line="84" selection-start-column="84" selection-end-line="84" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="474">
+          <caret line="86" column="42" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="42" />
         </state>
       </provider>
     </entry>
