@@ -41,14 +41,4 @@ pipeline {
             echo 'For example, if the Pipeline was previously failing but is now successful'
         }
     }
-=======
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Jenkins minute pipeline'
-      }
-    }
-  }
->>>>>>> ae82fca7e4d984f735413f6ebe4fecc23d3c55ad
 }
