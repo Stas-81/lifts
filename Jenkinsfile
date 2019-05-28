@@ -1,5 +1,4 @@
 pipeline {
-<<<<<<< HEAD
     agent any
 	environment {
         	DISABLE_AUTH = 'true'
@@ -19,7 +18,7 @@ pipeline {
 	stage('Test') {
             steps {
                 bat 'echo "Test stage"'
-		//bat 'gradle clean build'
+		bat 'gradle clean build'
             }
         }
         }
