@@ -4,6 +4,9 @@ pipeline {
         	DISABLE_AUTH = 'true'
         	DB_ENGINE    = 'sqlite'
     	}
+    tools {
+        gradle "GRADLE_LATEST"
+    }
     stages {
         stage('build') {
             steps {
